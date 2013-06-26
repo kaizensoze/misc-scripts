@@ -68,8 +68,8 @@ for friend_name in friends_lists_venues:
     print("%s: %s\n" % (friend_name, venue_names))
 
 """
-8630995  chris wang
-11823665 chris chen
+8630995
+11823665
 12199088
 15602674
 13619535
