@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+    <title>jsonp</title>
+</head>
+<body>
+    <span></span>
+    <script>
+        //this function is the callback, it needs to be a global variable
+        function readResponse(response){
+            // document.getElementsByTagName('SPAN')[0].innerHTML = response.feed.entry.length + ' entries returned';
+            // console.log(response);
+            console.log(response.feed.entry.length + ' entries returned');
+        }
+        (function(){
+            //note the "readResponse" at the end
+            var src = 'http://spreadsheets.google.com/feeds/list/o13394135408524254648.240766968415752635/od6/public/values?alt=json-in-script&callback=readResponse',
+                script = document.createElement('SCRIPT');
+            script.src = src;
+            document.body.appendChild(script);
+        })();
+
+    </script>
+</body>
+</html>
