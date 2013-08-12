@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/env zsh
 
 src="$HOME/Downloads/Adobe CS6 Master Collection (Mac)/amtlib.framework"
 
